@@ -1,12 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatedProperties", "CalculatedProperties\CalculatedProperties.csproj", "{4BAF4F80-AF92-4DAE-97A2-0ECD98BC3131}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Tests", "Unit Tests\Unit Tests.csproj", "{DCE7CC72-835C-48C3-9903-8A73F760B902}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9B19278-FE57-48BE-9B93-0ECCF87B015F}"
 	ProjectSection(SolutionItems) = preProject
 		Build.ps1 = Build.ps1
@@ -14,12 +10,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatedProperties.NetStandard", "CalculatedProperties.NetStandard\CalculatedProperties.NetStandard.csproj", "{4C734C2C-7758-41A1-BA8D-27B2FE52485E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatedProperties.Profile328", "CalculatedProperties.Profile328\CalculatedProperties.Profile328.csproj", "{4BAF4F80-AF92-4DAE-97A2-0ECD98BC3131}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CalculatedProperties", "CalculatedProperties\CalculatedProperties.shproj", "{E7E80BC0-4CD9-49E4-B04B-0AE29CB43D9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7FA18B0D-298C-47E5-BC22-E78EDE22E0A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatedProperties.Profile328.Tests", "Tests\CalculatedProperties.Profile328.Tests\CalculatedProperties.Profile328.Tests.csproj", "{DCE7CC72-835C-48C3-9903-8A73F760B902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatedProperties.NetStandard.Tests", "Tests\CalculatedProperties.NetStandard.Tests\CalculatedProperties.NetStandard.Tests.csproj", "{6471FE67-BAAB-440F-9F1F-5677F8A818EE}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CalculatedProperties\CalculatedProperties.projitems*{4baf4f80-af92-4dae-97a2-0ecd98bc3131}*SharedItemsImports = 4
+		CalculatedProperties\CalculatedProperties.projitems*{4c734c2c-7758-41a1-ba8d-27b2fe52485e}*SharedItemsImports = 4
+		CalculatedProperties\CalculatedProperties.projitems*{e7e80bc0-4cd9-49e4-b04b-0ae29cb43d9b}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C734C2C-7758-41A1-BA8D-27B2FE52485E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C734C2C-7758-41A1-BA8D-27B2FE52485E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C734C2C-7758-41A1-BA8D-27B2FE52485E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C734C2C-7758-41A1-BA8D-27B2FE52485E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4BAF4F80-AF92-4DAE-97A2-0ECD98BC3131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4BAF4F80-AF92-4DAE-97A2-0ECD98BC3131}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BAF4F80-AF92-4DAE-97A2-0ECD98BC3131}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -28,8 +45,16 @@ Global
 		{DCE7CC72-835C-48C3-9903-8A73F760B902}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCE7CC72-835C-48C3-9903-8A73F760B902}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCE7CC72-835C-48C3-9903-8A73F760B902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6471FE67-BAAB-440F-9F1F-5677F8A818EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6471FE67-BAAB-440F-9F1F-5677F8A818EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6471FE67-BAAB-440F-9F1F-5677F8A818EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6471FE67-BAAB-440F-9F1F-5677F8A818EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DCE7CC72-835C-48C3-9903-8A73F760B902} = {7FA18B0D-298C-47E5-BC22-E78EDE22E0A1}
+		{6471FE67-BAAB-440F-9F1F-5677F8A818EE} = {7FA18B0D-298C-47E5-BC22-E78EDE22E0A1}
 	EndGlobalSection
 EndGlobal

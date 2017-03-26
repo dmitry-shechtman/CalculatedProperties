@@ -48,7 +48,7 @@ namespace CalculatedProperties.Internal
                 _iNotifyCollectionChangedType = interfaces.FirstOrDefault(x => x.FullName == "System.Collections.Specialized.INotifyCollectionChanged");
                 if (_iNotifyCollectionChangedType == null)
                     return false;
-                var assembly = _iNotifyCollectionChangedType.Assembly;
+                var assembly = _iNotifyCollectionChangedType.GetAssembly();
                 _notifyCollectionChangedEventHandlerType = assembly.GetType("System.Collections.Specialized.NotifyCollectionChangedEventHandler");
                 _notifyCollectionChangedEventArgsType = assembly.GetType("System.Collections.Specialized.NotifyCollectionChangedEventArgs");
                 _collectionChangedEvent = _iNotifyCollectionChangedType.GetEvent("CollectionChanged");
@@ -62,7 +62,7 @@ namespace CalculatedProperties.Internal
                 _iBindingListType = interfaces.FirstOrDefault(x => x.FullName == "System.ComponentModel.IBindingList");
                 if (_iBindingListType == null)
                     return false;
-                var assembly = _iBindingListType.Assembly;
+                var assembly = _iBindingListType.GetAssembly();
                 _listChangedEventHandlerType = assembly.GetType("System.ComponentModel.ListChangedEventHandler");
                 _listChangedEventArgsType = assembly.GetType("System.ComponentModel.ListChangedEventArgs");
                 _listChangedEvent = _iBindingListType.GetEvent("ListChanged");

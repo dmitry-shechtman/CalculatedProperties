@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e7e80bc0-4cd9-49e4-b04b-0ae29cb43d9b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CalculatedProperties</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CalculatedProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Internal\DependencyTracker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Internal\IProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Internal\IPropertyChangedNotificationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Internal\ISourceProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Internal\ITargetProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Internal\ReflectionHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Internal\SourcePropertyBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PropertyChangedNotificationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PropertyHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TriggerProperty.cs" />
+  </ItemGroup>
+</Project>
